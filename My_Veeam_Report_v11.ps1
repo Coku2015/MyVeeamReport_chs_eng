@@ -19,13 +19,15 @@
     Run script from (an elevated) PowerShell console  
   
     .NOTES
-    Author: Shawn Masterson
+    Translated and modified by Lei Wei
+    Last Updated 2021/08/30
+    Version: v11
+    Original Author: Shawn Masterson
     Last Updated: December 2017
     Version: 9.5.3
   
     Requires:
-    Veeam Backup & Replication v9.5 Update 3 (full or console install)
-    VMware Infrastructure
+    Veeam Backup & Replication v11(full or console install)
 
 #> 
 
@@ -58,7 +60,6 @@ $showVBR = $true
 # HTML Report Width (Percent)
 $rptWidth = 97
 
-
 function Get-Localization
 {
     $Localize = Read-Host "是否使用中文版报表(Generate Chinese report)?Y/N."
@@ -72,7 +73,6 @@ function Get-Localization
 
 #Localization
 $Localization = Get-Localization
-
 
 # Location of Veeam executable (Veeam.Backup.Shell.exe)
 $veeamExePath = "C:\Program Files\Veeam\Backup and Replication\Console\Veeam.Backup.Shell.exe"
